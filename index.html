@@ -28,6 +28,10 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
 
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
     </head>
     
     <!-- https://api.mapbox.com/styles/v1/tamirp/cjnl52zxy51282so382fpu33u.html?fresh=true&title=true&access_token=pk.eyJ1IjoidGFtaXJwIiwiYSI6ImNqNmtvcjBieTFtOGgzMm52NWQ1Nnc1NTkifQ.CxOvrXtNgryGkkgXkiShsQ#13.7/32.087510/34.810045/0 -->
@@ -100,8 +104,18 @@
         <div class="section" id="VideoData" styleClass="style-video" line-color="#65E4D8">
                 <div class="section-title">Videos</div>
                 <div class="videos-block" >
-                        <div v-for="video in videosSection">
-                       {{video.videoTitle}}
+                        <div v-for="video in videosSection" class="transition video-tile" :style="getTime(video.videoLength)">
+                                <div class="block" style="flex-grow: 1">
+                                                <div class="transition video-title">{{video.videoTitle}}</div>
+                                                <div class="transition video-subtitle">{{video.videoAuthor}} • {{video.videoLength}}</div>
+                                               
+                                </div>
+                                <div class="block" style="width:24px;align-items: center;display: flex;">
+                                                <i class="material-icons">
+                                                                play_circle_filled_white
+                                                                </i>
+                                </div>
+                               
                        
                     </div>
                 </div>    

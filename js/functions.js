@@ -56,6 +56,11 @@ var videosData = new Vue({
 	data: {
 		videosSection: []
 
+	},
+	methods: {
+		getTime: function (mins) {
+		  return "width:" + ((mins.split(":")[0]*60 + mins.split(":")[1])/3600) + "%;";
+		}
 	}
 });
 
