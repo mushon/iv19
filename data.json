@@ -1,0 +1,34 @@
+[{
+    "title": "Block1",
+    "eventCollection": [{
+        "title": "Event title",
+        "meta": "Top title",
+        "author": "Tamir Pomerantz",
+        "hour": "12:20"
+    }, {
+        "title": "Event title",
+        "author": "Tamir Pomerantz",
+        "hour": "12:20"
+    }, {
+        "title": "Event title",
+        "meta": "Top title",
+        "author": "Tamir Pomerantz",
+        "hour": "12:20"
+    }]
+},{
+    "title": "Block2",
+    "eventCollection": [{
+        "title": "Event title",
+        "author": "Tamir Pomerantz",
+        "hour": "12:20"
+    }, {
+        "title": "Event title",
+        "meta": "Top title",
+        "author": "Tamir Pomerantz",
+        "hour": "12:20"
+    }, {
+        "title": "Event title",
+        "author": "Tamir Pomerantz",
+        "hour": "12:20"
+    }]
+}]

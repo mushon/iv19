@@ -1,0 +1,14 @@
+[{
+    "title":"Mega-Early-Bird Tickets",
+    "meta-title":"BEST DEAL",
+    "price":"55$ • For individuals only",
+    "isSoldOut":true
+},{
+    "title":"Day Tickets",
+    "price":"55$",
+    "isSoldOut":false
+},{
+    "title":"Company Tickets",
+    "price":"49$ • For Companies only",
+    "isSoldOut":false
+}]
