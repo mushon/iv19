@@ -390,6 +390,8 @@ background: var(--side-highlight);
 .video-tile .material-icons {
 opacity: 0;
 color: var(--side-highlight);
+width:24px;
+overflow: hidden;
 }
 .video-tile:hover .material-icons {
 opacity: 1;
