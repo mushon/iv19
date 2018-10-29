@@ -1,34 +1,46 @@
 [{
-    "title": "Block1",
+    "title": "Morning summit",
     "eventCollection": [{
-        "title": "Event title",
+        "title": "Explaining & Exploring: Datorama’s Data Model",
         "meta": "Top title",
-        "author": "Tamir Pomerantz",
-        "hour": "12:20"
+        "author": "Tamar Akavia, UX Lead at Datorama Ltd",
+        "hour": "12:20",
+        "content": "Datorama brings together multiple marketing data sources into one consolidated data model, that allows marketing analysts to query and analyze all their marketing data in one unified place.\nThat’s a technological wonder, the cutting edge in the field of marketing analytics. But to be trusted and utilized, the magic needs to be understood. The analysts know a lot about their data sources, but less about Datorama’s unified data model. Furthermore, they want a solid understanding of how their data is “mapped” into that data model.\nIn this talk we’ll walk through the iterative process of creating a new data model visualization, meant to improve this understanding.\nBuilding upon the existing - robust and informative, yet “dry” - module, we offered a dynamic visualization tool, giving a high-level overview of the entire data model’s structure, and allowing the analysts to explore through the model, discover relations between entities, view calculations over those entities and more.",
+        "isOpen":false
     }, {
         "title": "Event title",
         "author": "Tamir Pomerantz",
-        "hour": "12:20"
+        "hour": "12:20",
+        "content": "fdsfsdfdffdsfds",
+        "isOpen":false
     }, {
         "title": "Event title",
         "meta": "Top title",
         "author": "Tamir Pomerantz",
-        "hour": "12:20"
+        "hour": "12:20",
+        "content": "fdsfsdfdffdsfds",
+        "isOpen":false
     }]
 },{
-    "title": "Block2",
+    "title": "Data in Israel",
     "eventCollection": [{
         "title": "Event title",
         "author": "Tamir Pomerantz",
-        "hour": "12:20"
+        "hour": "12:20",
+        "content": "fdsfsdfdffdsfds",
+        "isOpen":false
     }, {
         "title": "Event title",
         "meta": "Top title",
         "author": "Tamir Pomerantz",
-        "hour": "12:20"
+        "hour": "12:20",
+        "content": "fdsfsdfdffdsfds",
+        "isOpen":false
     }, {
         "title": "Event title",
         "author": "Tamir Pomerantz",
-        "hour": "12:20"
+        "hour": "12:20",
+        "content": "fdsfsdfdffdsfds",
+        "isOpen":false
     }]
 }]

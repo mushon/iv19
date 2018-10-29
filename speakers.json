@@ -1,8 +1,8 @@
 [{
-    "name":"tamir",
-    "subtitle":"fdsfdsfsd",
+    "name":"Tamar Akavia",
+    "subtitle":"UX Lead at Datorama Ltd",
     "img":"1.jpg",
-    "desc":"fsdfdsfdsfs"
+    "desc": "Datorama brings together multiple marketing data sources into one consolidated data model, that allows marketing analysts to query and analyze all their marketing data in one unified place. That's a technological wonder, the cutting edge in the field of marketing analytics. But to be trusted and utilized, the magic needs to be understood. The analysts know a lot about their data sources, but less about Datorama's unified data model. Furthermore, they want a solid understanding of how their data is 'mapped' into that data model. In this talk we'll walk through the iterative process of creating a new data model visualization, meant to improve this understanding. Building upon the existing - robust and informative, yet 'dry' - module, we offered a dynamic visualization tool, giving a high-level overview of the entire data model's structure, and allowing the analysts to explore through the model, discover relations between entities, view calculations over those entities and more."
 },{
     "name":"tamir",
     "subtitle":"fdsfdsfsd",
