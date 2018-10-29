@@ -5,6 +5,8 @@ body {
     box-sizing: border-box;
     overscroll-behavior: none;
     transition: all 0.3s linear;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .noselect {
@@ -415,4 +417,45 @@ color: var(--primary-dark);
 }
 .video-tile:hover .video-title ,  .video-tile:hover .video-subtitle{
     color:var(--side-highlight);
+    }
+
+
+
+    /* mobbile */
+
+    @media only screen and (max-width: 640px) {
+        *{
+            --padding-date:56px;
+        }
+        #map {
+            width: 100%;
+            left: 0px;
+        }
+    nav {
+        display: none;
+    }
+    .section {
+        padding-left: 12px;
+        padding-right: 32px;
+    }
+    .event-tile {
+        align-items: flex-start;
+    }
+    .event-tile__title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .event-tile__author {
+        font-size: 12px;
+        line-height: 16px;  
+    }
+    .event-time {
+font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+    }
+    .speaker-tile {
+width: 100%;
+max-width: 100%;
+    }
     }
