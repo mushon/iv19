@@ -107,15 +107,17 @@
         <div class="section" id="SpeakersData" styleClass="style-speakers" line-color="#F48FB1" map-pitch="10">
                 <div class="section-title">Speakers</div>
                 <div class="speakers-block" >
-                            <div v-for="speaker in speakersSection" class="speaker-tile">
-                                        <div class="speaker-tile-header">
-                                                        <div class="speaker-tile-title">{{speaker.name}}</div>
-                                                        <div class="speaker-tile-subtitle">{{speaker.subtitle}}</div>
-                                                       
-                                        </div>
-                                        <div class="speaker-tile-desc">{{speaker.desc}}</div>
-                        </div>
-                    </div>      
+                <div class="speakers-col" v-for="colnum in 3">
+                        <div v-for="(speaker, index) in speakersSection" class="speaker-tile" :class="{'grid-hide': index % 3 !== colnum-1}">
+                                    <div class="speaker-tile-header">
+                                                    <div class="speaker-tile-title">{{speaker.name}}</div>
+                                                    <div class="speaker-tile-subtitle">{{speaker.subtitle}}</div>
+                                                   
+                                    </div>
+                                    <div class="speaker-tile-desc">{{speaker.desc}}</div>
+                    </div>
+                </div>   
+                </div>   
         </div>
         <div class="section" id="VenueData" styleClass="style-venue" line-color="#fff" map-pitch="0">
                 <div class="section-title">Venue</div>

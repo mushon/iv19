@@ -36,6 +36,9 @@
     geolocation.watchPosition = geolocation.getCurrentPosition;
   
   })(navigator.geolocation);
+
+
+  var currcoord = [0,0];
   
   
   
@@ -53,23 +56,27 @@ var map = new mapboxgl.Map({
 
 navigator.geolocation.watchPosition(function (pos) {
 	getRoute([pos.coords.longitude, pos.coords.latitude])
-	map.on("load", function(){
-		scrollNow(); 
-		map.fitBounds([
-			[pos.coords.longitude, pos.coords.latitude],
-			[34.8008359, 32.0900011]
-		], {
-			padding: {
-				top: 40,
-				bottom: 40,
-				left: 40,
-				right: 40
-			}
-		});
-	 })
+	currcoord = [pos.coords.longitude,pos.coords.latitude];
+	map.fitBounds([
+		currcoord,
+		[34.8008359, 32.0900011]
+	], {
+		padding: {
+			top: 40,
+			bottom: 40,
+			left: 40,
+			right: 40
+		}
+	});
+	setTimeout(
+		function() {
+			finishMapinitialAnimation = true;
+		}, 2000);
 });
 
 
+
+	
 function getRoute(startPos) {
 	var start = startPos;
 	var end = [34.8008359, 32.0900011]; // Shenkar

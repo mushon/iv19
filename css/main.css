@@ -89,6 +89,8 @@ body.style-video {
     padding-top: 40px;
     z-index: 2;
     position: relative;
+    max-width: 1360px;
+    margin: auto;
 }
 
 /* navigation */
@@ -221,7 +223,9 @@ background: var(--side-highlight);
 /* Events table */
 .section-title {
     font-family: 'IBM Plex Serif', serif;
+    font-style: italic;
     font-size: 40px;
+    font-weight: 600;
     line-height: 72px;
     color: var(--secondary-dark);
     padding-bottom: 44px;
@@ -277,12 +281,13 @@ background: var(--side-highlight);
 
 
 .event-time {
+    font-family: 'IBM Plex Serif', serif;
+    font-style: italic;
     width: var(--padding-date);
     font-weight: 600;
     font-size: 16px;
     line-height: 28px;
     color: var(--primary-dark);
-    font-family: 'IBM Plex Serif', serif;
 }
 
 .event-tile__meta {
@@ -337,9 +342,21 @@ background: var(--side-highlight);
 }
 
 /* Speakers */
+.speakers-col {
+    display: flex;
+    flex-flow: column;
+}
+
+.speakers-block {
+    display: flex;
+    flex-flow: row;
+}
 .speaker-tile {
-    width: 33%;
-    max-width: 320px;
+   max-width: 320px;
+   margin-right: 24px;
+}
+.speaker-tile.grid-hide {
+display: none;
 }
 .speaker-tile-header {
     height:230px;
@@ -460,4 +477,19 @@ line-height: 22px;
 width: 100%;
 max-width: 100%;
     }
+    .speaker-tile.grid-hide {
+        display: block;
+        }
+    .speakers-col { 
+
+    display: none;
+}
+    .speakers-col:first-child  {
+        display: block;
+    }
+    
+    .speakers-block {
+        display: block;
+    }
+
     }

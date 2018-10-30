@@ -59,7 +59,7 @@ var videosData = new Vue({
 	},
 	methods: {
 		getTime: function (mins) {
-		  return "width:" + ((mins.split(":")[0]*60 + mins.split(":")[1])/3600) + "%;";
+			return "width:" + ((mins.split(":")[0] * 60 + mins.split(":")[1]) / 3600) + "%;";
 		}
 	}
 });
@@ -73,13 +73,11 @@ var ticketsData = new Vue({
 });
 
 //ready 
-
-
+var finishMapinitialAnimation = false;
 
 // if using safari
 
-if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-}
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {}
 
 // Check if is mobile / touch. if touch - show mobile version
 checkMobile = function () {
@@ -119,7 +117,6 @@ $(".scrollToLink").click(function () {
 var windowHeigth = $(window).height() / 2;
 
 function scrollNow() {
-	console.log(windowHeigth);
 	var currScroll = $(window).scrollTop() + (windowHeigth / 2);
 	var lastScroll = $(".section:first");
 	var prevScroll;
@@ -135,8 +132,12 @@ function scrollNow() {
 		$("body").removeClass();
 		$("body").addClass(lastScroll.attr('styleClass'));
 
-		map.flyTo({pitch: lastScroll.attr('map-pitch')});
+		if (currcoord[0] !== 0 && finishMapinitialAnimation) {
+			map.flyTo({pitch: lastScroll.attr('map-pitch')});
 		map.setPaintProperty("shenkar-route", 'line-color', lastScroll.attr('line-color'));
+
+		}
+
 
 		// change prevscroll
 		prevScroll = lastScroll;
