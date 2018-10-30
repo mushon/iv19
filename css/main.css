@@ -19,6 +19,26 @@ body {
                                     supported by Chrome and Opera */
   }
 
+  .intro-page-cover {
+      top:0px;
+      left: 0px;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: #65E4D8;
+    display: flex;
+    position: fixed;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in;
+}
+
+
+.intro-page-cover.page-loaded {
+    opacity: 0;
+    pointer-events: none;
+}
+
 #map {
     z-index: 0;
     position: fixed;
@@ -96,13 +116,31 @@ body.style-video {
 /* navigation */
 
 nav {
+    z-index: 100;
     position: fixed;
     height: 100%;
-    width: 200px;
+    width: 244px;
     top: 0px;
     left: 0px;
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
     background: var(--side-color);
+}
+
+.shenkar-logo {
+    fill: var(--primary-dark);
+
+}
+.lockup-title {
+    font-family: "IBM plex Sans";
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1.3px;
+    padding-bottom: 8px;
+    color: var(--primary-dark);
 
 }
 
@@ -294,6 +332,9 @@ background: var(--side-highlight);
     line-height: 28px;
     color: var(--primary-dark);
     padding-top: 20px;
+    flex-basis: var(--padding-date);
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 .event-time.no-subtitle {
     padding-top: 4px;
@@ -325,6 +366,7 @@ background: var(--side-highlight);
     line-height: 18px;
     color: var(--primary-dark);
     font-family: 'IBM Plex Mono', monospace;
+    margin-top: 6px;
 }
 
 
@@ -336,11 +378,11 @@ background: var(--side-highlight);
     transition: all 0.4s ease-in-out;
     margin-left: var(--padding-date);
     max-width: 550px;
-    font-size: 14px;
+    font-size: 16px;
     color:var(--primary-dark);
     font-family: 'IBM Plex Sans', sans-serif;
-    line-height: 22px;
-    letter-spacing: 0.1px;
+    line-height: 26px;
+    letter-spacing: 0.2px;
     margin-top: 0px;
 
 }
@@ -376,7 +418,20 @@ display: none;
     justify-content: flex-end;
     padding: 12px;
     margin-bottom: 16px;
-    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.speaker-tile-header img {
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+  
+    mix-blend-mode:multiply;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    opacity: 1;
 }
 .speaker-tile .speaker-tile-title {
     font-size: 14px;
