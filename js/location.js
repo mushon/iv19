@@ -14,22 +14,6 @@
     geolocation = window.navigator.geolocation = {};
     geolocation.getCurrentPosition = function(callback){
       
-      if (cache) callback(cache);
-      
-      $.getScript('//www.google.com/jsapi',function(){
-        
-       // sometimes ClientLocation comes back null
-       if (google.loader.ClientLocation) {
-        cache = {
-          coords : {
-            "latitude": google.loader.ClientLocation.latitude, 
-            "longitude": google.loader.ClientLocation.longitude
-          }
-        };
-       }
-        
-        callback(cache);
-      });
       
     };
     
@@ -54,8 +38,44 @@ var map = new mapboxgl.Map({
 });
 
 
-navigator.geolocation.watchPosition(function (pos) {
-	getRoute([pos.coords.longitude, pos.coords.latitude])
+	try{
+		if(navigator.geolocation) {
+				
+navigator.geolocation.watchPosition(function(pos) {
+	applyRoute(pos);
+  },
+  function (error) { 
+	fallbackGPS();
+  });
+		} else {
+			fallbackGPS();
+		}
+	} catch(evt) {
+		fallbackGPS();
+	}
+
+
+
+function fallbackGPS() {
+      
+      $.getScript('//www.google.com/jsapi',function(){
+        
+       // sometimes ClientLocation comes back null
+       if (google.loader.ClientLocation) {
+		applyRoute({
+			coords : {
+			  "latitude": google.loader.ClientLocation.latitude, 
+			  "longitude": google.loader.ClientLocation.longitude
+			}
+		  });
+       }
+        
+      });
+      
+}
+
+function applyRoute(pos) {
+getRoute([pos.coords.longitude, pos.coords.latitude])
 	currcoord = [pos.coords.longitude,pos.coords.latitude];
 	map.fitBounds([
 		currcoord,
@@ -72,11 +92,8 @@ navigator.geolocation.watchPosition(function (pos) {
 		function() {
 			finishMapinitialAnimation = true;
 		}, 2000);
-});
 
-
-
-	
+}
 function getRoute(startPos) {
 	var start = startPos;
 	var end = [34.8008359, 32.0900011]; // Shenkar
