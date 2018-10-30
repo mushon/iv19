@@ -129,7 +129,10 @@
         <div class="section" id="VideoData" styleClass="style-video" line-color="#65E4D8" map-pitch="0">
                 <div class="section-title">Videos</div>
                 <div class="videos-block" >
-                        <div v-for="video in videosSection" class="transition video-tile" :style="getTime(video.videoLength)">
+                        <div>
+<span v-for="tag in allViedoTags" v-on:click="activeTag = tag">{{tag}}</span>
+                        </div>
+                        <div v-for="video in filteredItems" class="transition video-tile" :style="getTime(video.videoLength)">
                                 <div class="block" style="flex-grow: 1">
                                                 <div class="transition video-title">{{video.videoTitle}}</div>
                                                 <div class="transition video-subtitle">{{video.videoAuthor}} • {{video.videoLength}}</div>

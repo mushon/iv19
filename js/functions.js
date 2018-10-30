@@ -1,3 +1,18 @@
+
+Array.prototype.inArray = function(variable) { 
+    for(var i=0; i < this.length; i++) { 
+        if(variable(this[i])) return true; 
+    }
+    return false; 
+}; 
+
+
+Array.prototype.pushIfNotExist = function(element, variable) { 
+    if (!this.inArray(variable)) {
+        this.push(element);
+    }
+}; 
+
 //get website data
 
 $.getJSON('data.json')
@@ -10,9 +25,18 @@ $.getJSON('speakers.json')
 		speakersData.speakersSection = data;
 	});
 
+	
 $.getJSON('videos.json')
 	.done(function (data) {
 		videosData.videosSection = data;
+		for (var i = 0; i < videosData.videosSection.length; i++) {
+		for (var j = 0; j < videosData.videosSection[i].videoTags.length; j++) {
+			
+			videosData.allViedoTags.pushIfNotExist(videosData.videosSection[i].videoTags[j], function(e) { 
+				return e === videosData.videosSection[i].videoTags[j] 
+			});
+		}
+	}
 	});
 
 $.getJSON('intro.json')
@@ -54,9 +78,18 @@ var speakersData = new Vue({
 var videosData = new Vue({
 	el: '#VideoData',
 	data: {
-		videosSection: []
+		videosSection: [],
+		allViedoTags: [],
+		activeTag: ''
 
 	},
+	computed: {
+		filteredItems() {
+		  return this.videosSection.filter(item => {
+			 return item.videoTags[0].toLowerCase().indexOf(this.activeTag.toLowerCase()) > -1
+		  })
+		}
+	  },
 	methods: {
 		getTime: function (mins) {
 			return "width:" + ((mins.split(":")[0] * 60 + mins.split(":")[1]) / 3600) + "%;";

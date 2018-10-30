@@ -4,7 +4,7 @@
     "videoAuthor":"Barbara Tversky",
     "videoLength":"55:49",
     "videoYear":2015,
-    "videoTags":"fds,fd,fd,fd"
+    "videoTags":["fds1","fds2"]
 },
 {
     "videoTitle":"Weaving Data Into Stories",
@@ -12,7 +12,7 @@
     "videoAuthor":"Robert Kosara",
     "videoLength":"40:44",
     "videoYear":2015,
-    "videoTags":"fds,fd,fd,fd"
+    "videoTags":["fds1","fds1"]
 },
 {
     "videoTitle":"Disinformation Visualization—How to lie with Dataviz",
@@ -20,7 +20,7 @@
     "videoAuthor":"Mushon Zer-Aviv",
     "videoLength":"55:49",
     "videoYear":2015,
-    "videoTags":"fds,fd,fd,fd"
+    "videoTags":["fds1","fds3"]
 },
 {
     "videoTitle":"Enlighten and Obfuscate, Empower and Mislead",
@@ -28,7 +28,7 @@
     "videoAuthor":"Enrico Bertini",
     "videoLength":"47:13",
     "videoYear":2015,
-    "videoTags":"fds,fd,fd,fd"
+    "videoTags":["fds1","fds1"]
 },
 {
     "videoTitle":"Visualizing museum visitor behavior patterns",
@@ -36,7 +36,7 @@
     "videoAuthor":"Joel Lanir",
     "videoLength":"29:51",
     "videoYear":2015,
-    "videoTags":"fds,fd,fd,fd"
+    "videoTags":["fds1","fds4"]
 },
 {
     "videoTitle":"Visualizing a Budget",
@@ -44,7 +44,7 @@
     "videoAuthor":"Adam Kariv",
     "videoLength":"30:41",
     "videoYear":2015,
-    "videoTags":"fds,fd,fd,fd"
+    "videoTags":["fds1","fds1"]
 },
 {
     "videoTitle":"Measuring the effectiveness of data visualizations",
@@ -52,7 +52,7 @@
     "videoAuthor":"Mark Shovman",
     "videoLength":"22:12",
     "videoYear":2015,
-    "videoTags":"fds,fd,fd,fd"
+    "videoTags":["fds1","fds1"]
 },
 {
     "videoTitle":"Visual Analytics of Movement",
@@ -60,7 +60,7 @@
     "videoAuthor":"Peter Bak",
     "videoLength":"23:44",
     "videoYear":2015,
-    "videoTags":"fds,fd,fd,fd"
+    "videoTags":["fds1","fds1"]
 },
 {
     "videoTitle":"You’ve got a lot of data! Now what?",
@@ -68,7 +68,7 @@
     "videoAuthor":"Ron Bekkerman",
     "videoLength":"23:46",
     "videoYear":2015,
-    "videoTags":"fds,fd,fd,fd"
+    "videoTags":["fds1","fds1"]
 },
 {
     "videoTitle":"Journalism, Activism, Fetishism",
@@ -76,5 +76,5 @@
     "videoAuthor":"Giulio Frigieri",
     "videoLength":"47:41",
     "videoYear":2015,
-    "videoTags":"fds,fd,fd,fd"
+    "videoTags":["fds1","fds1"]
 }]
