@@ -79,22 +79,25 @@
             <div v-for="event in eventCollection.eventCollection" class="transition event-block"  v-bind:class="{ isOpen: event.isOpen }">
                     <div class="event-header" v-on:click="event.isOpen=!event.isOpen">
                     
-                    <span>
+                    <div class="event-titles">
 
+                                <div class="transition event-time" :class="{'no-subtitle':!(event.meta)}">{{ event.hour }}</div>
                    
-                        <div v-if="event.meta" class=" transition event-tile__meta">{{ event.meta }}</div>
                 <div class="event-tile">
 
-                        <div class="transition event-time">{{ event.hour }}</div>
+                        <div v-if="event.meta" class=" transition event-tile__meta">{{ event.meta }}</div>
+
                         <div class="transition event-tile__title">{{ event.title }}</div>
-                </div>
                         <div class="transition event-tile__author">{{ event.author }}</div>
-                </span>
+
+                </div>
                 <span>
                                 <i class="material-icons event-button">
                                                 arrow_downward
                                                 </i> 
                 </span>
+        </div>
+                
         </div>
         <div class="event-content">
                         {{ event.content }}
