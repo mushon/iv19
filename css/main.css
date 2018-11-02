@@ -392,6 +392,26 @@ background: var(--side-highlight);
     margin-top: 24px;
 }
 
+
+/* event images  */
+.event-images-container 
+{
+max-width: 100%;
+position: relative;
+}
+.event-images-container .event-image 
+{
+    width:100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+.event-image.image-visible {
+    opacity: 1;
+}
+
 /* Speakers */
 .speakers-col {
     display: flex;

@@ -76,8 +76,7 @@ var speakersData = new Vue({
 	},
 	methods: {
 		getStyle: function (speaker) {
-		
-			return "background-image: url(images/"+speaker.img+"), linear-gradient(#eb01a5, #d13531);";
+			return "background-image: url(images/"+speaker.img+")";
 		}
 	}
 });
@@ -149,9 +148,10 @@ function scrollNow() {
 	var lastScroll = $(".section:first");
 	var prevScroll;
 
-	$(".section").each(function (index) {
-		if ($(this).offset().top < currScroll) {
+	$(".section").each(function () {
+			if (isElementOnScreen($(this).attr('id'))) {
 			lastScroll = $(this);
+			console.log()
 		}
 	});
 
@@ -175,3 +175,11 @@ function scrollNow() {
 $(window).scroll(function () {
 	scrollNow();
 });
+
+
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+

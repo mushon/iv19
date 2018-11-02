@@ -111,7 +111,16 @@
                 
         </div>
         <div class="event-content">
-                        {{ event.content }}
+        <div class="event-images-container">
+                        <div class="event-images-container-controls">
+                                <div class="event-images-container-controls-next" v-on:click="event.currImage++"> next </div>
+                                <div class="event-images-container-controls-prev" v-on:click="event.currImage--">prev</div>
+                        </div>
+                <div class="event-image" v-for="(img, index) in event.images" :class="{'image-visible':!(event.currImage==index)}">
+                        <img :src="img" alt="">
+                </div>
+        </div>
+                {{ event.content }}
         </div>
 
                 </div>
