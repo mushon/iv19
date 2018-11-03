@@ -41,7 +41,7 @@
                 <div id='map'></div>
 
         <nav class="transition">
-           
+           <div class="none"></div>
             <div class="nav-unit">
                         <li class='scrollToLink intro-link' scrolltarget='introData'>Intro</li>
                         <li class='scrollToLink tickets-link' scrolltarget='ticketsData'>Tickets</li>
@@ -71,19 +71,20 @@
                 <div class="section-title">Tickets</div>
                 <div class="tickets-container">
 
-                    <div class="tickets-block"  v-for="ticket in ticketsSection" >
-                            <div class="block" v-bind:class="{ 'is-disabled': ticket.isSoldOut}">
+                    <div class="tickets-block"  v-for="ticket in ticketsSection" v-bind:class="{ 'is-disabled': ticket.isSoldOut}">
+                            <div class="block" >
                                         <div v-if="ticket['meta-title']" class="tickets-meta-title">{{ticket['meta-title']}}</div>
                                         <div class="tickets-main-title">{{ticket.title}}</div>
                                         <div class="tickets-subtitle">{{ticket.price}}</div>
                             </div>
                             <div class="button">purchase  </div>
+                            <div class="sold-out-tag tickets-main-title ">Sold out</div>
                             
                     </div>
                 </div>
                 
         </div>
-        <div class="event-section section noselect" id="eventsData" styleClass="style-events" line-color="#F48FB1" map-pitch="30" >
+        <div class="event-section section noselect" id="eventsData" styleClass="style-events" line-color="#FFD03E" map-pitch="30" >
             <div class="transition section-title">Schedule</div>
                 <div v-for="eventCollection in eventSection">
                 <div class="transition event-collection-title">{{ eventCollection.title }}</div>
@@ -98,8 +99,8 @@
 
                         <div v-if="event.meta" class=" transition event-tile__meta">{{ event.meta }}</div>
 
-                        <div class="transition event-tile__title">{{ event.title }}</div>
-                        <div class="transition event-tile__author">{{ event.author }}</div>
+                        <div class="transition event-tile__title">{{ event.author }}</div>
+                        <div class="transition event-tile__author">{{ event.title }}</div>
 
                 </div>
                 <span>
@@ -127,28 +128,29 @@
                
             </div>
         </div>
-        <div class="section" id="SpeakersData" styleClass="style-speakers" line-color="#F48FB1" map-pitch="10">
+        <div class="section" id="SpeakersData" styleClass="style-speakers" line-color="#FFD03E" map-pitch="10">
                 <div class="section-title">Speakers</div>
-                <div class="speakers-block" >
-                <div class="speakers-col" v-for="colnum in 3">
-                        <div v-for="(speaker, index) in speakersSection" class="speaker-tile" :class="{'grid-hide': index % 3 !== colnum-1}">
-                                    <div class="speaker-tile-header">
-                                                <div class="speaker-tile-title">{{speaker.name}}</div>
-                                                <div class="speaker-tile-subtitle">{{speaker.subtitle}}</div>
-                                                 
-                                        <img :src="speaker.img" alt="">
-                                                  
+                <div class="transition speakers-block" >
+                <!-- <div class="speakers-col" v-for="colnum in 2"> -->
+                        <div v-for="(speaker, index) in speakersSection" class="speaker-tile">
+                                    <div class="transition speaker-tile-header">
+                                        <img :src="speaker.img" alt="">    
+                                       
                                     </div>
-                                    <div class="speaker-tile-desc">{{speaker.desc}}</div>
+                                    
+                                    <div class="speaker-tile-desc">
+                                                <div class="speaker-tile-title">{{speaker.name}}</div>
+                                                <div class="speaker-tile-subtitle">{{speaker.subtitle}}</div>       
+                                        {{speaker.desc}}</div>
                     </div>
-                </div>   
+                <!-- </div>    -->
                 </div>   
         </div>
         <div class="section" id="VenueData" styleClass="style-venue" line-color="#fff" map-pitch="0">
                 <div class="section-title">Venue</div>
             
         </div>
-        <div class="section" id="VideoData" styleClass="style-video" line-color="#65E4D8" map-pitch="0">
+        <div class="section" id="VideoData" styleClass="style-video" line-color="#FFD03E" map-pitch="0">
                 <div class="section-title">Videos</div>
                 <div class="videos-block" >
                         <div>

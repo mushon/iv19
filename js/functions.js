@@ -180,6 +180,6 @@ $(window).scroll(function () {
 function isElementOnScreen(id) {
     var element = document.getElementById(id);
     var bounds = element.getBoundingClientRect();
-    return bounds.top < window.innerHeight && bounds.bottom > 0;
+    return bounds.top < (window.innerHeight/2) && bounds.bottom > 0;
 }
 
