@@ -20,6 +20,12 @@ $.getJSON('data.json')
 		eventsData.eventSection = data;
 	});
 
+
+	$.getJSON('dates.json')
+	.done(function (data) {
+		datesData.dateSection = data;		
+	});
+
 $.getJSON('speakers.json')
 	.done(function (data) {
 		speakersData.speakersSection = data;
@@ -51,6 +57,14 @@ $.getJSON('tickets.json')
 
 
 // Load data into different views
+
+var datesData = new Vue({
+	el: '#datesData',
+	data: {
+		DatesSection: []
+	}
+});
+
 
 var eventsData = new Vue({
 	el: '#eventsData',

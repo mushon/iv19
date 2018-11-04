@@ -60,13 +60,24 @@
         </nav>
        
         <div class="section" id="introData" styleClass="style-intro" line-color="#fff" map-pitch="70"> 
-                <!-- <div class="intro-page-cover" :class="{'page-loaded':(isPageLoaded)}"></div> -->
-                <div class="intro-title-1">{{introSection.title1}}</div>
-                <div class="intro-title-2">{{introSection.title2}}</div>
-                <div class="intro-title-3">{{introSection.title3}}</div>
+                        <!-- <div class="intro-page-cover" :class="{'page-loaded':(isPageLoaded)}"></div> -->
+                        <div class="intro-title-1">{{introSection.title1}}</div>
+                        <div class="intro-title-2">{{introSection.title2}}</div>
+                        <div class="intro-title-3">{{introSection.title3}}</div>
+        
+                        
+                </div>
+
+                <div class="section" id="datesData" styleClass="style-intro" line-color="#fff" map-pitch="70"> 
+                                <div class="kkk"  v-for="date in DatesSection">
+                                        {{date.dateTitle}}
+                                </div>
 
                 
-        </div>
+                                
+                        </div>
+
+
         <div class="section" id="ticketsData" styleClass="style-tickets" line-color="#fff" map-pitch="50">
                 <div class="section-title">Tickets</div>
                 <div class="tickets-container">
