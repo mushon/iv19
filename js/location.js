@@ -48,7 +48,7 @@ try {
 	if (navigator.geolocation) {
 
 		navigator.geolocation.watchPosition(function (pos) {
-			$.ajax('http://ip-api.com/json')
+			$.ajax('https://ip-api.com/json')
 		.then(
 			function success(response) {
 
@@ -75,7 +75,7 @@ try {
 function fallbackGPS() {
 	console.log('fallback!');
 
-	$.ajax('http://ip-api.com/json')
+	$.ajax('https://ip-api.com/json')
 		.then(
 			function success(response) {
 
