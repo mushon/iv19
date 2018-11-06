@@ -78,7 +78,7 @@ function fallbackGPS() {
 	$.ajax('https://ipapi.co/json')
 		.then(
 			function success(response) {
-
+				console.log(response);
 				applyRoute({
 					coords: {
 						"latitude": response.latitude,
