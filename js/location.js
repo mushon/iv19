@@ -1,4 +1,3 @@
-
 var currcoord = [0, 0];
 
 var padding = {
@@ -24,8 +23,7 @@ checkMobile = function () {
 
 var isMobile = checkMobile();
 
-if (isMobile)
-{
+if (isMobile) {
 	padding = {
 		top: 40,
 		bottom: 40,
@@ -50,47 +48,18 @@ try {
 	if (navigator.geolocation) {
 
 		navigator.geolocation.watchPosition(function (pos) {
-				applyRoute(pos);
+			$.ajax('http://ip-api.com/json')
+		.then(
+			function success(response) {
 
-				var geojson = {
-					type: 'FeatureCollection',
-					features: [{
-					  type: 'Feature',
-					  geometry: {
-						type: 'Point',
-						coordinates: [pos.coords.longitude, pos.coords.latitude]
-					  },
-					  properties: {
-						title: 'Your Location'
-					  }
-					},
-					{
-					  type: 'Feature',
-					  geometry: {
-						type: 'Point',
-						coordinates: [34.8008359, 32.0900011]
-					  },
-					  properties: {
-						title: '13.2.2018<br><b>ISVIS 2019</b>'
-					  }
-					}]
-				  };
+				applyRoute(pos,response.city);			},
 
+			function fail(data, status) {
 
-				geojson.features.forEach(function(marker) {
-
-					// create a HTML element for each feature
-					var el = document.createElement('div');
-					el.className = 'map-marker';
-					el.innerHTML = marker.properties.title;
-				  
-					// make a marker for each feature and add to the map
-					new mapboxgl.Marker(el)
-					.setLngLat(marker.geometry.coordinates)
-					.addTo(map);
-				  });
-
-
+				//TODO
+			}
+		);
+		
 			},
 			function (error) {
 				fallbackGPS();
@@ -103,28 +72,72 @@ try {
 }
 
 
-
 function fallbackGPS() {
+	console.log('fallback!');
 
-	$.getScript('//www.google.com/jsapi', function () {
+	$.ajax('http://ip-api.com/json')
+		.then(
+			function success(response) {
 
-		// sometimes ClientLocation comes back null
-		if (google.loader.ClientLocation) {
-			applyRoute({
-				coords: {
-					"latitude": google.loader.ClientLocation.latitude,
-					"longitude": google.loader.ClientLocation.longitude
-				}
-			});
-		}
+				applyRoute({
+					coords: {
+						"latitude": response.lat,
+						"longitude": response.lon
+					}
+				},response.city);			},
 
-	});
+			function fail(data, status) {
+
+				//TODO
+			}
+		);
 
 }
 
-function applyRoute(pos) {
-	getRoute([pos.coords.longitude, pos.coords.latitude])
+function applyRoute(pos,city) {
+	getRoute([pos.coords.longitude, pos.coords.latitude]);
 	currcoord = [pos.coords.longitude, pos.coords.latitude];
+
+	var geojson = {
+		type: 'FeatureCollection',
+		features: [{
+				type: 'Feature',
+				geometry: {
+					type: 'Point',
+					coordinates: [pos.coords.longitude, pos.coords.latitude]
+				},
+				properties: {
+					title: 'Your Location<br><b>'+city+'</b>'
+				}
+			},
+			{
+				type: 'Feature',
+				geometry: {
+					type: 'Point',
+					coordinates: [34.8008359, 32.0900011]
+				},
+				properties: {
+					title: '13.2.2018<br><b>ISVIS 2019</b>'
+				}
+			}
+		]
+	};
+
+
+	geojson.features.forEach(function (marker) {
+
+		// create a HTML element for each feature
+		var el = document.createElement('div');
+		el.className = 'map-marker';
+		el.innerHTML = marker.properties.title;
+
+		// make a marker for each feature and add to the map
+		new mapboxgl.Marker(el)
+			.setLngLat(marker.geometry.coordinates)
+			.addTo(map);
+	});
+
+
 	map.fitBounds([
 		currcoord,
 		[34.8008359, 32.0900011]
@@ -140,7 +153,7 @@ function applyRoute(pos) {
 		function () {
 			finishMapinitialAnimation = true;
 			scrollNow();
-		introData.isPageLoaded = true;
+			introData.isPageLoaded = true;
 
 		}, 1500);
 
