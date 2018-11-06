@@ -81,8 +81,8 @@ function fallbackGPS() {
 
 				applyRoute({
 					coords: {
-						"latitude": response.lat,
-						"longitude": response.lon
+						"latitude": response.latitude,
+						"longitude": response.longitude
 					}
 				},response.city);			},
 
