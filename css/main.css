@@ -51,6 +51,39 @@ body {
 }
 
 
+.map-marker {
+    top:-25px !important;
+   background: var(--side-highlight);
+    font-family: 'Arbel', monospace;
+    padding:5px 6px;
+    font-size: 10px;
+    line-height: 12px;
+    color:var(--primary-dark);
+    background: #fff;
+    transition: opacity 0.2s linear;
+
+  }
+
+  .map-marker:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 11px solid transparent;
+	border-top-color: #fff;;
+	border-bottom: 0;
+	margin-left: -11px;
+	margin-bottom: -5px;
+}
+
+body.style-events .map-marker ,
+body.style-speakers .map-marker ,
+body.style-video .map-marker  {
+    opacity: 0;
+}
+
 .transition {
     transition: all 0.3s linear;
 }
@@ -90,9 +123,9 @@ body.style-speakers {
     --primary-dark: #011715;
     --primary-dark-disabled: #ccc;
 
-    --secondary-dark: #FFD03E;
+    --secondary-dark: #4F8DF9;
     --side-color: #fff;
-    --side-highlight: #FFD03E;
+    --side-highlight: #4F8DF9;
 }
 
 body.style-venue {
@@ -167,6 +200,7 @@ nav li {
     list-style: none;
     /* text-transform: uppercase; */
     transition: color 0.2s linear;
+    cursor: pointer;
 }
 
 body.style-intro .scrollToLink.intro-link,
@@ -434,6 +468,7 @@ background: #444;
 {
 max-width: 100%;
 position: relative;
+height: 330px;
 }
 .event-images-container .event-image 
 {
@@ -446,6 +481,26 @@ position: relative;
 }
 .event-image.image-visible {
     opacity: 1;
+}
+.event-images-container-controls {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+.event-images-container-controls:hover { 
+opacity: 1;
+}
+.carrousel-button {
+    color:#fff;
+}
+.carrousel-button:hover {
+    color:var(--secondary-dark);
 }
 
 /* Speakers */
@@ -471,7 +526,7 @@ position: relative;
 display: none;
 }
 .speaker-tile-header {
-    background: var(--secondary-dark);
+    background: #FFD03E;
     display: flex;
     align-items: flex-start;
     flex-direction: column;

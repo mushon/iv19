@@ -51,6 +51,46 @@ try {
 
 		navigator.geolocation.watchPosition(function (pos) {
 				applyRoute(pos);
+
+				var geojson = {
+					type: 'FeatureCollection',
+					features: [{
+					  type: 'Feature',
+					  geometry: {
+						type: 'Point',
+						coordinates: [pos.coords.longitude, pos.coords.latitude]
+					  },
+					  properties: {
+						title: 'Your Location'
+					  }
+					},
+					{
+					  type: 'Feature',
+					  geometry: {
+						type: 'Point',
+						coordinates: [34.8008359, 32.0900011]
+					  },
+					  properties: {
+						title: '13.2.2018<br><b>ISVIS 2019</b>'
+					  }
+					}]
+				  };
+
+
+				geojson.features.forEach(function(marker) {
+
+					// create a HTML element for each feature
+					var el = document.createElement('div');
+					el.className = 'map-marker';
+					el.innerHTML = marker.properties.title;
+				  
+					// make a marker for each feature and add to the map
+					new mapboxgl.Marker(el)
+					.setLngLat(marker.geometry.coordinates)
+					.addTo(map);
+				  });
+
+
 			},
 			function (error) {
 				fallbackGPS();

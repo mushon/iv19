@@ -47,7 +47,7 @@
                         <li class='scrollToLink tickets-link' scrolltarget='ticketsData'>Tickets</li>
                         <li class='scrollToLink events-link' scrolltarget='eventsData'>Schedule</li>
                         <li class='scrollToLink speakers-link' scrolltarget='SpeakersData'>Speakers</li>
-                        <li class='scrollToLink venue-link' scrolltarget='VenueData'>Venue</li>
+                        <!-- <li class='scrollToLink venue-link' scrolltarget='VenueData'>Venue</li> -->
                         <li class='scrollToLink video-link' scrolltarget='VideoData'>Videos</li>
             </div>
             <div class="lockup">
@@ -124,12 +124,13 @@
         </div>
         <div class="event-content">
         <div class="event-images-container">
-                        <div class="event-images-container-controls">
-                                <div class="event-images-container-controls-next" v-on:click="event.currImage++"> next </div>
-                                <div class="event-images-container-controls-prev" v-on:click="event.currImage--">prev</div>
-                        </div>
+                       
                 <div class="event-image" v-for="(img, index) in event.images" :class="{'image-visible':!(event.currImage==index)}">
                         <img :src="img" alt="">
+                </div>
+                <div class="event-images-container-controls">
+                        <div class="event-images-container-controls-next" v-on:click="event.currImage++"> <i class="material-icons carrousel-button">arrow_back</i>  </div>
+                        <div class="event-images-container-controls-prev" v-on:click="event.currImage--"><i class="material-icons carrousel-button">arrow_forward</i></div>
                 </div>
         </div>
                 {{ event.content }}
@@ -157,10 +158,10 @@
                 <!-- </div>    -->
                 </div>   
         </div>
-        <div class="section" id="VenueData" styleClass="style-venue" line-color="#fff" map-pitch="0">
+        <!-- <div class="section" id="VenueData" styleClass="style-venue" line-color="#fff" map-pitch="0">
                 <div class="section-title">Venue</div>
             
-        </div>
+        </div> -->
         <div class="section" id="VideoData" styleClass="style-video" line-color="#FFD03E" map-pitch="0">
                 <div class="section-title">Videos</div>
                 <div class="videos-block" >

@@ -62,6 +62,11 @@ var datesData = new Vue({
 	el: '#datesData',
 	data: {
 		DatesSection: []
+	},
+	methods: {
+		nextImage: function () {
+		// TODO	
+		}
 	}
 });
 
