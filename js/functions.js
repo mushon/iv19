@@ -118,6 +118,17 @@ var videosData = new Vue({
 	methods: {
 		getTime: function (mins) {
 			return "width:" + ((mins.split(":")[0] * 60 + mins.split(":")[1]) / 3600) + "%;";
+		}, 
+		filterVideos: function (tag)
+		{
+			this.activeTag = tag;
+		},
+		isTagPresent: function (arr)
+		{
+
+			return arr.reduce((acc, crr) => (
+				acc || crr == this.activeTag
+), false)
 		}
 	}
 });

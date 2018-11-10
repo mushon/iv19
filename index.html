@@ -166,9 +166,9 @@
                 <div class="section-title">Videos</div>
                 <div class="videos-block" >
                         <div>
-<span v-for="tag in allViedoTags" v-on:click="activeTag = tag">{{tag}}</span>
+<span v-for="tag in allViedoTags" v-on:click="filterVideos(tag)">{{tag}}</span>
                         </div>
-                        <div v-for="video in filteredItems" class="transition video-tile" :style="getTime(video.videoLength)">
+                        <div v-for="video in videosSection" class="transition video-tile" :style="getTime(video.videoLength)" :class="{'invisible':(isTagPresent(video.videoTags))}">
                                 <div class="block" style="flex-grow: 1">
                                                 <div class="transition video-title">{{video.videoTitle}}</div>
                                                 <div class="transition video-subtitle">{{video.videoAuthor}} • {{video.videoLength}}</div>
