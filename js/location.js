@@ -38,7 +38,7 @@ var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/tamirp/cjnrgql5r1zfl2slrl9p0o03r',
 	center: [34.8008359, 32.0900011],
-	zoom: 17,
+	zoom: 11,
 	bearing: 0,
 	pitch: 50
 });

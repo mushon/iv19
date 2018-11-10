@@ -8,12 +8,12 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>ISVIS 2019</title>
-        <meta name="description" content="Performance 0:6 / Autumn Cult">
+        <meta name="description" content="ISVIS 2019 - in conjunction with the IsraHCI conference">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <!-- <meta property="og:type" content="website" /> -->
         <meta property="og:title" content="ISVIS 2019" />
         <meta property="og:site_name" content="ISVIS 2019" />
-        <meta property="og:description" content="ISVIS 2019" />
+        <meta property="og:description" content="ISVIS 2019 - in conjunction with the IsraHCI conference" />
         <!-- <meta property="og:image" content="http://svt-hazira.com/ogimage.png" /> -->
         <!-- <meta property="og:image:url" content="http://svt-hazira.com/ogimage.png" /> -->
         <meta property="og:image:width" content="1200" />
@@ -42,7 +42,7 @@
         <nav class="transition">
                 <div class="none"></div>
                 <div class="nav-unit">
-                        <li class='scrollToLink intro-link' scrolltarget='introData'>Intro</li>
+                        <li class='scrollToLink intro-link' scrolltarget='introData'>IsVis</li>
                         <li class='scrollToLink tickets-link' scrolltarget='ticketsData'>Tickets</li>
                         <li class='scrollToLink events-link' scrolltarget='eventsData'>Schedule</li>
                         <li class='scrollToLink speakers-link' scrolltarget='SpeakersData'>Speakers</li>
@@ -81,7 +81,7 @@
         </div>
 
 
-        <div class="section" id="ticketsData" styleClass="style-tickets" line-color="#fff" map-pitch="50">
+        <div class="section noselect" id="ticketsData" styleClass="style-tickets" line-color="#fff" map-pitch="50">
                 <div class="section-title">Tickets</div>
                 <div class="tickets-container">
 
@@ -150,7 +150,7 @@
 
                 </div>
         </div>
-        <div class="section" id="SpeakersData" styleClass="style-speakers" line-color="#FFD03E" map-pitch="10">
+        <div class="section" id="SpeakersData" styleClass="style-speakers" line-color="#E6648F" map-pitch="10">
                 <div class="section-title">Speakers</div>
                 <div class="transition speakers-block">
                         <!-- <div class="speakers-col" v-for="colnum in 2"> -->
@@ -173,9 +173,9 @@
                 <div class="section-title">Venue</div>
             
         </div> -->
-        <div class="section" id="VideoData" styleClass="style-video" line-color="#4F8DF9" map-pitch="0">
+        <div class="section" id="VideoData" styleClass="style-video" line-color="#E6648F" map-pitch="0">
                 <div class="section-title">Videos</div>
-                <div class="videos-block">
+                <div class="videos-block noselect">
                         <div class="tags-container">
                                 <div class="tags-title">Show videos from:</div>
                                 <span v-for="year in allViedoYears" v-on:click="filterYear(year)" class="video-tag"
@@ -188,8 +188,9 @@
                                 <span v-on:click="sortBy='videoLength'" class="video-tag" :class="{'active-tag':(sortBy=='videoLength')}">videoLength</span>
                                 <span v-on:click="sortBy='videoTitle'" class="video-tag" :class="{'active-tag':(sortBy=='videoTitle')}">videoTitle</span>
                         </div>
-                        <div v-for="video in ordered" class="transition video-tile" :style="getTime(video.videoLength)"
+                        <a :href="'https://www.youtube.com/watch?v=' + video.youtubeID" target="_blank" v-for="video in ordered" class="transition video-tile" 
                                 :class="{'invisible':(video.videoYear !== activeYear),'inactive':(!isTagPresent(video.videoTags))}">
+                                <div class="video-length" :style="getTime(video.videoLength)"></div>
                                 <div class="block" style="flex-grow: 1">
                                         <div class="transition video-title">{{video.videoTitle}}</div>
                                         <div class="transition video-subtitle">{{video.videoAuthor}} •
@@ -203,7 +204,7 @@
                                 </div>
 
 
-                        </div>
+                        </a>
                 </div>
 
         </div>
