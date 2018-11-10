@@ -1,16 +1,15 @@
-
 // Adding array functions
-Array.prototype.inArray = function(variable) { 
-    for(var i=0; i < this.length; i++) { 
-        if(variable(this[i])) return true; 
-    }
-    return false; 
-}; 
-Array.prototype.pushIfNotExist = function(element, variable) { 
-    if (!this.inArray(variable)) {
-        this.push(element);
-    }
-}; 
+Array.prototype.inArray = function (variable) {
+	for (var i = 0; i < this.length; i++) {
+		if (variable(this[i])) return true;
+	}
+	return false;
+};
+Array.prototype.pushIfNotExist = function (element, variable) {
+	if (!this.inArray(variable)) {
+		this.push(element);
+	}
+};
 
 
 //get website data from json files
@@ -21,9 +20,9 @@ $.getJSON('data.json')
 	});
 
 
-	$.getJSON('dates.json')
+$.getJSON('dates.json')
 	.done(function (data) {
-		datesData.dateSection = data;		
+		datesData.dateSection = data;
 	});
 
 $.getJSON('speakers.json')
@@ -31,18 +30,22 @@ $.getJSON('speakers.json')
 		speakersData.speakersSection = data;
 	});
 
-	
+
 $.getJSON('videos.json')
 	.done(function (data) {
 		videosData.videosSection = data;
 		for (var i = 0; i < videosData.videosSection.length; i++) {
-		for (var j = 0; j < videosData.videosSection[i].videoTags.length; j++) {
-			// push all tags into an arrat
-			videosData.allViedoTags.pushIfNotExist(videosData.videosSection[i].videoTags[j], function(e) { 
-				return e === videosData.videosSection[i].videoTags[j] 
+
+			videosData.allViedoYears.pushIfNotExist(videosData.videosSection[i].videoYear, function (e) {
+				return e === videosData.videosSection[i].videoYear
 			});
+			for (var j = 0; j < videosData.videosSection[i].videoTags.length; j++) {
+				// push all tags into an arrat
+				videosData.allViedoTags.pushIfNotExist(videosData.videosSection[i].videoTags[j], function (e) {
+					return e === videosData.videosSection[i].videoTags[j]
+				});
+			}
 		}
-	}
 	});
 
 $.getJSON('intro.json')
@@ -65,7 +68,7 @@ var datesData = new Vue({
 	},
 	methods: {
 		nextImage: function () {
-		// TODO	
+			// TODO	
 		}
 	}
 });
@@ -95,7 +98,7 @@ var speakersData = new Vue({
 	},
 	methods: {
 		getStyle: function (speaker) {
-			return "background-image: url(images/"+speaker.img+")";
+			return "background-image: url(images/" + speaker.img + ")";
 		}
 	}
 });
@@ -105,30 +108,47 @@ var videosData = new Vue({
 	data: {
 		videosSection: [],
 		allViedoTags: [],
-		activeTag: ''
+		allViedoYears: [],
+		activeTag: '',
+		activeYear: 2015,
+		sortBy: 'videoLength'
 
-	},
-	computed: {
-		filteredItems() {
-		  return this.videosSection.filter(item => {
-			 return item.videoTags[0].toLowerCase().indexOf(this.activeTag.toLowerCase()) > -1
-		  })
+	},computed: {
+		ordered: function () {
+		  return this.videosSection
 		}
 	  },
 	methods: {
 		getTime: function (mins) {
 			return "width:" + ((mins.split(":")[0] * 60 + mins.split(":")[1]) / 3600) + "%;";
-		}, 
-		filterVideos: function (tag)
-		{
-			this.activeTag = tag;
 		},
-		isTagPresent: function (arr)
-		{
+		filterVideos: function (tag) {
+			if (this.activeTag == tag)
+			{
+				this.activeTag = "";	
+			} else
+			{
+				this.activeTag = tag;
 
-			return arr.reduce((acc, crr) => (
-				acc || crr == this.activeTag
-), false)
+			}
+		},
+		filterYear: function (year) {
+			this.activeYear = year;
+		},
+		isTagPresent: function (arr) {
+			if (this.activeTag!=='')
+			{
+				return arr.reduce((acc, crr) => (
+					acc || crr == this.activeTag
+				), false)
+			} else {
+				return arr;
+			}
+			
+		},
+		isYear: function (year) {
+			return year == this.activeYear;
+
 		}
 	}
 });
@@ -179,7 +199,7 @@ function scrollNow() {
 	var prevScroll;
 
 	$(".section").each(function () {
-			if (isElementOnScreen($(this).attr('id'))) {
+		if (isElementOnScreen($(this).attr('id'))) {
 			lastScroll = $(this);
 			console.log()
 		}
@@ -191,8 +211,10 @@ function scrollNow() {
 		$("body").addClass(lastScroll.attr('styleClass'));
 
 		if (currcoord[0] !== 0 && finishMapinitialAnimation) {
-			map.flyTo({pitch: lastScroll.attr('map-pitch')});
-		map.setPaintProperty("shenkar-route", 'line-color', lastScroll.attr('line-color'));
+			map.flyTo({
+				pitch: lastScroll.attr('map-pitch')
+			});
+			map.setPaintProperty("shenkar-route", 'line-color', lastScroll.attr('line-color'));
 
 		}
 
@@ -208,8 +230,7 @@ $(window).scroll(function () {
 
 
 function isElementOnScreen(id) {
-    var element = document.getElementById(id);
-    var bounds = element.getBoundingClientRect();
-    return bounds.top < (window.innerHeight/2) && bounds.bottom > 0;
+	var element = document.getElementById(id);
+	var bounds = element.getBoundingClientRect();
+	return bounds.top < (window.innerHeight / 2) && bounds.bottom > 0;
 }
-
