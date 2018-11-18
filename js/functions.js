@@ -115,7 +115,10 @@ var videosData = new Vue({
 
 	},computed: {
 		ordered: function () {
-		  return this.videosSection
+			console.log('hereS');
+		//   return (this.videosSection, 'videoLength');
+		  return this.videosSection;
+
 		}
 	  },
 	methods: {

@@ -184,9 +184,9 @@
                                 <span v-for="tag in allViedoTags" v-on:click="filterVideos(tag)" class="video-tag"
                                         :class="{'active-tag':(activeTag==tag)}">{{tag}}</span>
 
-                                <div class="tags-title">Sort by:</div>
+                                <!-- <div class="tags-title">Sort by:</div>
                                 <span v-on:click="sortBy='videoLength'" class="video-tag" :class="{'active-tag':(sortBy=='videoLength')}">videoLength</span>
-                                <span v-on:click="sortBy='videoTitle'" class="video-tag" :class="{'active-tag':(sortBy=='videoTitle')}">videoTitle</span>
+                                <span v-on:click="sortBy='videoTitle'" class="video-tag" :class="{'active-tag':(sortBy=='videoTitle')}">videoTitle</span> -->
                         </div>
                         <a :href="'https://www.youtube.com/watch?v=' + video.youtubeID" target="_blank" v-for="video in ordered" class="transition video-tile" 
                                 :class="{'invisible':(video.videoYear !== activeYear),'inactive':(!isTagPresent(video.videoTags))}">
@@ -212,7 +212,6 @@
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.core.min.js"></script> -->
         
 
         <script type="text/javascript" src="js/location.js"></script>
