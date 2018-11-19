@@ -664,6 +664,10 @@ display: none;
 
 
 /* videos */
+
+.videos-block {
+    min-height: 1000px;
+}
 .video-tile {
     padding: 8px 0;
     display: flex;
