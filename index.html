@@ -132,16 +132,10 @@
                                 <div class="event-content">
                                         <div class="event-images-container">
 
-                                                <div class="event-image" v-for="(img, index) in event.images" :class="{'image-visible':!(event.currImage==index)}">
-                                                        <img :src="img" alt="">
+                                                <div class="event-image">
+                                                        <img :src="event.image" alt="">
                                                 </div>
-                                                <div class="event-images-container-controls">
-                                                        <div class="event-images-container-controls-next" v-on:click="event.currImage++">
-                                                                <i class="material-icons carrousel-button">arrow_back</i>
-                                                        </div>
-                                                        <div class="event-images-container-controls-prev" v-on:click="event.currImage--"><i
-                                                                        class="material-icons carrousel-button">arrow_forward</i></div>
-                                                </div>
+                                               
                                         </div>
                                         {{ event.content }}
                                 </div>
@@ -190,18 +184,25 @@
                         </div>
                         <a :href="'https://www.youtube.com/watch?v=' + video.youtubeID" target="_blank" v-for="video in ordered" class="transition video-tile" 
                                 :class="{'invisible':(video.videoYear !== activeYear),'inactive':(!isTagPresent(video.videoTags))}">
-                                <div class="video-length" :style="getTime(video.videoLength)"></div>
-                                <div class="block" style="flex-grow: 1">
-                                        <div class="transition video-title">{{video.videoTitle}}</div>
+                                <div class="video-length transition" :style="getTime(video.videoLength)"></div>
+                                <div class="block" style="width: 100%;">
+                                        <!-- <img :src="'https://img.youtube.com/vi/'+video.youtubeID+'/2.jpg'" style="width:56px;"> -->
+                                        <div class="transition video-title">
+                                                <div class="video-title-title transition">
+                                                                {{video.videoTitle}}
+
+                                                </div>
+                                                <div class="block" style="width:24px;align-items: center;display: flex;">
+                                                                <i class="material-icons">
+                                                                        play_circle_filled_white
+                                                                </i>
+                                                        </div>
+                                                </div>
                                         <div class="transition video-subtitle">{{video.videoAuthor}} •
                                                 {{video.videoLength}}</div>
 
                                 </div>
-                                <div class="block" style="width:24px;align-items: center;display: flex;">
-                                        <i class="material-icons">
-                                                play_circle_filled_white
-                                        </i>
-                                </div>
+                              
 
 
                         </a>
