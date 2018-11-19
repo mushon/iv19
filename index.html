@@ -39,9 +39,9 @@
 <body class="body-start style-intro">
         <div id='map'></div>
 
-        <nav class="transition">
+        <nav class="transition" >
                 <div class="none"></div>
-                <div class="nav-unit">
+                <div class="nav-unit" :>
                         <li class='scrollToLink intro-link' scrolltarget='introData'>IsVis</li>
                         <li class='scrollToLink tickets-link' scrolltarget='ticketsData'>Tickets</li>
                         <li class='scrollToLink events-link' scrolltarget='eventsData'>Schedule</li>
@@ -63,10 +63,29 @@
         </nav>
 
         <div class="section" id="introData" styleClass="style-intro" line-color="#fff" map-pitch="70">
+                        <div :class="{'displaynone':(introSection.isSubmitions)}">
+
+                                        <div class="intro-title-1">{{introSection.title1}}</div>
+                                        <div class="intro-title-2">{{introSection.title2}}</div>
+                                        <div class="intro-title-3">{{introSection.title3}}</div>
+                        </div>
+
+                        <div :class="{'displaynone':(!introSection.isSubmitions)}">
+
+                                        <div class="intro-title-1">{{introSection.title1}}</div>
+                                        <div class="intro-title-2">Call for Submitions</div>
+                                        <div class="intro-title-3">{{introSection.CFStext}}</div>
+                                <div class="cfs-tags-container">
+                                                <div class="cfs-tag" v-for="date in introSection.dates" :class="{'white':(date.isNegative)}">
+                                                                <div class="cfs-tag-title" :class="{'cross':(date.isPast)}">{{date.date}}</div>
+                                                                <div class="cfs-tag-subtitle" :class="{'cross':(date.isPast)}">{{date.title}}</div>
+                                                </div>
+
+                                </div>
+                                      
+                        </div>
                 <!-- <div class="intro-page-cover" :class="{'page-loaded':(isPageLoaded)}"></div> -->
-                <div class="intro-title-1">{{introSection.title1}}</div>
-                <div class="intro-title-2">{{introSection.title2}}</div>
-                <div class="intro-title-3">{{introSection.title3}}</div>
+              
 
 
         </div>

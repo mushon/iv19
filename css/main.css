@@ -45,7 +45,9 @@ a { text-decoration: none;}
     margin: 0;
     border:none;
 }
-
+.displaynone {
+    display: none;
+}
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -97,6 +99,7 @@ a { text-decoration: none;}
     color:var(--primary-dark);
     background: #fff;
     transition: opacity 0.2s linear;
+    border-radius: 3px;
 
   }
 
@@ -283,6 +286,56 @@ body.style-video .scrollToLink.video-link {
     font-weight: 600;
     max-width:450px;
 }
+
+/* Call for submitions */
+.cross {
+    text-decoration: line-through;
+}
+.cfs-tags-container {
+    margin-top: 24px;
+    display: flex;
+}
+.cfs-tag {
+    padding: 5px;
+    font-family: var(--monospace-running);
+    padding:5px 6px;
+    font-size: 10px;
+    line-height: 12px;
+    color:#fff;
+    background: var(--primary-dark);
+    display: inline-block;
+    margin-right: 24px;
+    position: relative;
+    border-radius: 3px;
+
+}
+
+
+.cfs-tag:after {
+	content: '';
+	position: absolute;
+    bottom: 0px;
+    left: 50%;
+	width: 0;
+	height: 0;
+	border: 11px solid transparent;
+	border-top-color: var(--primary-dark);
+	border-bottom: 0;
+	margin-left: -11px;
+	margin-bottom: -5px;
+}
+.cfs-tag.white {
+    background: #fff;
+    color: var(--primary-dark);    
+    }
+    .cfs-tag.white:after {
+	border-top-color: #fff;
+
+    }
+    .cfs-tag-subtitle {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
 
 
 /* tickets */

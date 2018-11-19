@@ -117,7 +117,7 @@ function applyRoute(pos,city) {
 					coordinates: [34.8008359, 32.0900011]
 				},
 				properties: {
-					title: '13.2.2018<br><b>ISVIS 2019</b>'
+					title: '14 Dec<br><b>ISVIS 2019</b>'
 				}
 			}
 		]

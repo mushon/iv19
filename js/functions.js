@@ -14,6 +14,9 @@ Array.prototype.pushIfNotExist = function (element, variable) {
 
 //get website data from json files
 
+
+
+
 $.getJSON('data.json')
 	.done(function (data) {
 		eventsData.eventSection = data;
@@ -51,6 +54,15 @@ $.getJSON('videos.json')
 $.getJSON('intro.json')
 	.done(function (data) {
 		introData.introSection = data;
+
+		// hide all non related sections if "call for submitions" is active
+		if (introData.introSection.isSubmitions)
+		{
+			$('#datesData').hide();
+			$('#ticketsData').hide();
+			$('#eventsData').hide();
+			$('#SpeakersData').hide();
+		}
 	});
 
 $.getJSON('tickets.json')
