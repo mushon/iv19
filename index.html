@@ -187,6 +187,10 @@
             
         </div> -->
         <div class="section" id="VideoData" styleClass="style-video" line-color="#E6648F" map-pitch="0">
+                <div class="videos-modal" :class="{'active-modal':(isModalActive==true)}">
+                        {{modalData.videoTitle}}
+                        <div class="videos-modal-closebbutton" v-on:click="isModalActive=false">CLOSE</div>
+                </div>
                 <div class="section-title">Videos</div>
                 <div class="videos-block noselect">
                         <div class="tags-container">
@@ -201,8 +205,9 @@
                                 <span v-on:click="sortBy='videoLength'" class="video-tag" :class="{'active-tag':(sortBy=='videoLength')}">videoLength</span>
                                 <span v-on:click="sortBy='videoTitle'" class="video-tag" :class="{'active-tag':(sortBy=='videoTitle')}">videoTitle</span> -->
                         </div>
-                        <a :href="'https://www.youtube.com/watch?v=' + video.youtubeID" target="_blank" v-for="video in ordered" class="transition video-tile" 
+                        <div  v-for="video in ordered" class="transition video-tile"  v-on:click="modalData=video;isModalActive=true;" 
                                 :class="{'invisible':(video.videoYear !== activeYear),'inactive':(!isTagPresent(video.videoTags))}">
+                                <!-- :href="'https://www.youtube.com/watch?v=' + video.youtubeID" target="_blank" -->
                                 <div class="video-length transition" :style="getTime(video.videoLength)"></div>
                                 <div class="block" style="width: 100%;">
                                         <!-- <img :src="'https://img.youtube.com/vi/'+video.youtubeID+'/2.jpg'" style="width:56px;"> -->
@@ -224,7 +229,7 @@
                               
 
 
-                        </a>
+                        </div>
                 </div>
 
         </div>

@@ -124,7 +124,9 @@ var videosData = new Vue({
 		allViedoYears: [],
 		activeTag: '',
 		activeYear: 2015,
-		sortBy: 'videoLength'
+		sortBy: 'videoLength',
+		isModalActive:false,
+		modalData:{}
 
 	},computed: {
 		ordered: function () {

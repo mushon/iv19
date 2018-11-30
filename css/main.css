@@ -784,6 +784,25 @@ margin-bottom: 12px;
 margin-top: 16px;
 }
 
+
+/* video modal */
+
+.videos-modal {
+    position: fixed;
+    top:300px;
+    width: 200px;
+    height: 200px;
+    left: 300;
+    z-index: 999;
+    display: none;
+    background: rebeccapurple;
+
+}
+
+.videos-modal.active-modal {
+display: block;
+}
+
     /* mobbile */
 
     @media only screen and (max-width: 640px) {
