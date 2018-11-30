@@ -62,6 +62,7 @@ $.getJSON('intro.json')
 			$('#ticketsData').hide();
 			$('#eventsData').hide();
 			$('#SpeakersData').hide();
+			$('.hide-on-cfs').hide();
 		}
 	});
 
