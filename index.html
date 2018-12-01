@@ -263,23 +263,31 @@
                         <div class="videos-container">
                                 <div v-for="video in ordered" class="transition cursorpointer video-tile" v-on:click="modalData=video;isModalActive=true;scrollModalToTop();" 
                                         :class="{'invisible':(video.videoYear !== activeYear),'inactive':(!isTagPresent(video.videoTags))}">
-                                        <div class="video-tile-background" :style="'background-image:url(https://img.youtube.com/vi/'+video.youtubeID+'/hqdefault.jpg);'"></div>
+                                        <div class="video-tile-background" >
+                                                <div class="video-tile-background-bg" :style="'background-image:url(https://img.youtube.com/vi/'+video.youtubeID+'/hqdefault.jpg);'"></div>
+                                                <div class="top">
+                                                                <div class="tags-container">
+                                                                                <span v-for="vtag in video.videoTags" class="video-title-tag">{{vtag}}</span>
+                                                                        </div>
+                                                                        <div class="video-title-title transition">
+                                                                                {{video.videoTitle}} <i class="material-icons event-button">
+                                                                                                play_circle_filled
+                                                                                        </i>
+                                                                        </div>
+                                                </div>
+                                               
+                                                        <span></span>
+                                                        <div class="video-subtitle transition">
+                                                                {{video.videoLength}} • {{video.videoAuthor}} •
+                                                                {{video.AuthorTagline}}
+                                                        </div>
+                                        
+                                        </div>
                                         <!-- :href="'https://www.youtube.com/watch?v=' + video.youtubeID" target="_blank" -->
                                         <!-- <div class="block" style="width: 100%;"> -->
                                         <!-- <img :src="'https://img.youtube.com/vi/'+video.youtubeID+'/2.jpg'"> -->
                                         <div class="transition video-title">
-                                                <div class="tags-container">
-                                                        <span v-for="vtag in video.videoTags" class="video-title-tag">{{vtag}}</span>
-                                                </div>
-                                                <div class="video-title-title transition">
-                                                        {{video.videoTitle}} <i class="material-icons event-button">
-                                                                        play_circle_filled
-                                                                </i>
-                                                </div>
-                                                <div class="video-subtitle transition">
-                                                        {{video.videoLength}} • {{video.videoAuthor}} •
-                                                        {{video.AuthorTagline}}
-                                                </div>
+                                         
                                                 <div class="video-abstract">
                                                         {{video.Abstract}}
                                                 </div>
