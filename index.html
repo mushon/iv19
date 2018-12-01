@@ -198,7 +198,7 @@
                 <div class="section-title">Venue</div>
             
         </div> -->
-        <div class="section" id="VideoData" styleClass="style-video" line-color="#E6648F" map-pitch="0">
+        <div class="section" id="VideoData" styleClass="style-video" line-color="#222222" map-pitch="0">
                         <!-- <div class="videos-modal-backdrop" :class="{'videos-modal-backdrop--active':(isModalActive==true)}"  v-on:click="isModalActive=false;modalData={};"></div> -->
                         
                         <div class="videos-modal-container" :class="{'videos-modal-container--active':(isModalActive==true)}">
@@ -227,7 +227,7 @@
                         <div class="modal-left">
                                 <div class="modal-video-tile">
                                         <iframe id="ytplayer" type="text/html" :src="'https://www.youtube.com/embed/' + modalData.youtubeID + '?autoplay=1&origin=http://example.com'"
-                                                target="_blank" frameborder="0"></iframe>
+                                                target="_blank" frameborder="0" style="max-width: 100%;"></iframe>
                                         <a class="modal-youtube-link" :href="'https://www.youtube.com/watch?v=' + modalData.youtubeID"
                                                 target="_blank">
                                                 VIEW ON YOUTUBE <i class="material-icons">open_in_new</i>
@@ -265,7 +265,7 @@
                                         :class="{'invisible':(video.videoYear !== activeYear),'inactive':(!isTagPresent(video.videoTags))}">
                                         <div class="video-tile-background" >
                                                 <div class="video-tile-background-bg" :style="'background-image:url(https://img.youtube.com/vi/'+video.youtubeID+'/hqdefault.jpg);'"></div>
-                                                <div class="top">
+                                                <div style="z-index:2;">
                                                                 <div class="tags-container">
                                                                                 <span v-for="vtag in video.videoTags" class="video-title-tag">{{vtag}}</span>
                                                                         </div>
@@ -276,8 +276,7 @@
                                                                         </div>
                                                 </div>
                                                
-                                                        <span></span>
-                                                        <div class="video-subtitle transition">
+                                                        <div style="z-index:2;" class="video-subtitle transition">
                                                                 {{video.videoLength}} • {{video.videoAuthor}} •
                                                                 {{video.AuthorTagline}}
                                                         </div>
