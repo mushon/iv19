@@ -2,14 +2,28 @@
     "videoTitle":"How Diagrams Communicate",
     "youtubeID":"B_X0PGgJjTs",
     "videoAuthor":"Barbara Tversky",
+    "AuthorTagline":"foo",
+    "Abstract":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
+    "bio":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
+    "social_fb":"11",
+    "social_web":"33",
     "videoLength":"55:49",
+    "authorImage":"images/1.png",
     "videoYear":2015,
     "videoTags":["tag 1","tag 5"]
+    
 },
 {
     "videoTitle":"Weaving Data Into Stories",
     "youtubeID":"sR5fkfbqO8w",
     "videoAuthor":"Robert Kosara",
+    "AuthorTagline":"foo",
+    "Abstract":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
+    "bio":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",   
+    "social_fb":"11",
+    "social_tw":"22",
+    "social_web":"33",
+    "authorImage":"images/1.png",    
     "videoLength":"40:44",
     "videoYear":2015,
     "videoTags":["tag 1","tag 4"]
@@ -18,6 +32,9 @@
     "videoTitle":"Disinformation Visualization—How to lie with Dataviz",
     "youtubeID":"79_fcZ7iMEo",
     "videoAuthor":"Mushon Zer-Aviv",
+    "AuthorTagline":"foo",
+    "Abstract":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
+    "bio":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",   
     "videoLength":"55:49",
     "videoYear":2015,
     "videoTags":["tag 1","tag 2"]
@@ -26,6 +43,9 @@
     "videoTitle":"Enlighten and Obfuscate, Empower and Mislead",
     "youtubeID":"ci9Enaxe56o",
     "videoAuthor":"Enrico Bertini",
+    "AuthorTagline":"foo",
+    "Abstract":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
+    "social_web":"33",
     "videoLength":"47:13",
     "videoYear":2015,
     "videoTags":["tag 1","tag 2"]
@@ -34,6 +54,8 @@
     "videoTitle":"Visualizing museum visitor behavior patterns",
     "youtubeID":"_WFmbW7gQHM",
     "videoAuthor":"Joel Lanir",
+    "AuthorTagline":"foo",
+    "Abstract":"foo2",
     "videoLength":"29:51",
     "videoYear":2015,
     "videoTags":["tag 1","tag 3"]
@@ -42,6 +64,8 @@
     "videoTitle":"Visualizing a Budget",
     "youtubeID":"eoI9Zyu2kbU",
     "videoAuthor":"Adam Kariv",
+    "AuthorTagline":"foo",
+    "Abstract":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
     "videoLength":"30:41",
     "videoYear":2015,
     "videoTags":["tag 1","tag 4"]
@@ -50,6 +74,8 @@
     "videoTitle":"Measuring the effectiveness of data visualizations",
     "youtubeID":"tzz0qea8hZ0",
     "videoAuthor":"Mark Shovman",
+    "AuthorTagline":"foo",
+    "Abstract":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
     "videoLength":"22:12",
     "videoYear":2015,
     "videoTags":["tag 1","tag 5"]
@@ -58,6 +84,8 @@
     "videoTitle":"Visual Analytics of Movement",
     "youtubeID":"bkWZ67WtR18",
     "videoAuthor":"Peter Bak",
+    "AuthorTagline":"foo",
+    "Abstract":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
     "videoLength":"23:44",
     "videoYear":2015,
     "videoTags":["tag 1","tag 4"]
@@ -66,6 +94,8 @@
     "videoTitle":"You’ve got a lot of data! Now what?",
     "youtubeID":"BsK4TwELSAk",
     "videoAuthor":"Ron Bekkerman",
+    "AuthorTagline":"foo",
+    "Abstract":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
     "videoLength":"23:46",
     "videoYear":2015,
     "videoTags":["tag 1","tag 3"]
@@ -74,6 +104,8 @@
     "videoTitle":"Journalism, Activism, Fetishism",
     "youtubeID":"TO7HQ0V3XTA",
     "videoAuthor":"Giulio Frigieri",
+    "AuthorTagline":"foo",
+    "Abstract":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
     "videoLength":"47:41",
     "videoYear":2015,
     "videoTags":["tag 1","tag 2"]
@@ -82,6 +114,8 @@
     "videoTitle":"Journalism, Activism, Fetishism",
     "youtubeID":"TO7HQ0V3XTA",
     "videoAuthor":"Giulio Frigieri",
+    "AuthorTagline":"foo",
+    "Abstract":"As digital information continues to accumulate in our lives, information visualizations have become an increasingly relevant tool for discovering trends and shaping stories from this overabundance of data. Visualizations are typically designed based on the data to be displayed and the tasks to be supported, but they follow a one size-fits-all approach when it comes to user individual differences such as expertise, cognitive abilities, states and preferences. There is, however, mounting evidence that these user characteristics can significantly influence user experience during information visualization tasks. These findings have triggered research on user-adaptive visualizations, i.e.,,visualizations that can track and adapt to relevant user characteristics and specific needs. In this talk, I will present results on which user individual differences can impact visualization processing and on how these differences can be captured using predictive models based on eye-tracking data. I will also discuss how to leverage these models to provide personalized support that can improve the user's experience with a visualization",
     "videoLength":"47:41",
     "videoYear":2016,
     "videoTags":["tag 1","tag 2"]

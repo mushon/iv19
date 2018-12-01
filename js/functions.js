@@ -167,6 +167,14 @@ var videosData = new Vue({
 		isYear: function (year) {
 			return year == this.activeYear;
 
+		},
+		scrollModalToTop: function () {
+			console.log('here!');
+			$('.modal-right').animate({
+				scrollTop: 0
+			  }, 100);
+
+
 		}
 	}
 });

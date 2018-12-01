@@ -48,17 +48,8 @@ try {
 	if (navigator.geolocation) {
 
 		navigator.geolocation.watchPosition(function (pos) {
-			$.ajax('https://ipapi.co/json')
-		.then(
-			function success(response) {
-
-				applyRoute(pos,response.city);			},
-
-			function fail(data, status) {
-
-				//TODO
-			}
-		);
+			// console.log(pos);
+			applyRoute(pos,"Here");
 		
 			},
 			function (error) {
