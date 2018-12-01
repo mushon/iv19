@@ -148,15 +148,15 @@
                                                         <div v-if="event.meta" class=" transition event-tile__meta">{{
                                                                 event.meta }}</div>
 
-                                                        <div class="transition event-tile__title">{{ event.author }}</div>
+                                                        <div class="transition event-tile__title">{{ event.author }}<span class="hide-on-mobile">
+                                                                        <i class="material-icons event-button">
+                                                                                arrow_downward
+                                                                        </i>
+                                                                </span></div>
                                                         <div class="transition event-tile__author">{{ event.title }}</div>
 
                                                 </div>
-                                                <span>
-                                                        <i class="material-icons event-button">
-                                                                arrow_downward
-                                                        </i>
-                                                </span>
+                                                
                                         </div>
 
                                 </div>
@@ -269,11 +269,9 @@
                                                         {{video.videoLength}} • {{video.videoAuthor}} •
                                                         {{video.AuthorTagline}}
                                                 </div>
-
                                                 <div class="video-abstract">
                                                         {{video.Abstract}}
                                                 </div>
-
                                         </div>
 
 
