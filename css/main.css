@@ -783,6 +783,10 @@ body.style-video .scrollToLink.video-link {
 
 }
 
+.speaker-tile .speaker-tile-desc.speakerOpen {
+    /* background: rebeccapurple; */
+ }
+
 
 /* videos */
 
@@ -1293,8 +1297,13 @@ body.style-video .scrollToLink.video-link {
     }
 
     .speaker-tile .speaker-tile-desc {
-        font-size: 14px;
-        line-height: 22px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .speaker-tile:hover .speaker-tile-desc {
+        max-height: 1000px;
     }
 
 

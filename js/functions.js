@@ -31,9 +31,9 @@ $.getJSON('dates.json')
 $.getJSON('speakers.json')
 	.done(function (data) {
 		speakersData.speakersSection = data;
-		for (var i = 0; i < speakersData.speakersSection.length; i++) {
-			speakersData.speakersSection[i].isOpen = true;
-		}
+		// for (var i = 0; i < speakersData.speakersSection.length; i++) {
+		// 	speakersData.speakersSection[i].isOpen = true;
+		// }
 	});
 
 
@@ -113,8 +113,9 @@ var speakersData = new Vue({
 
 	},
 	methods: {
-		getStyle: function (speaker) {
-			return "background-image: url(images/" + speaker.img + ")";
+		reverse: function (speaker) {
+			this.speakersSection[speaker].isOpen = !this.speakersSection[speaker].isOpen;
+			// console.log(this.speakersSection[speaker]);
 		}
 	}
 });
