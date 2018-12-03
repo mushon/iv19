@@ -45,7 +45,7 @@
                         <li class='scrollToLink intro-link' scrolltarget='introData'>IsVis</li>
                         <li class='scrollToLink tickets-link hide-on-cfs' scrolltarget='ticketsData'>Tickets</li>
                         <li class='scrollToLink events-link hide-on-cfs' scrolltarget='eventsData'>Schedule</li>
-                        <li class='scrollToLink speakers-link hide-on-cfs' scrolltarget='SpeakersData'>Speakers</li>
+                        <!-- <li class='scrollToLink speakers-link hide-on-cfs' scrolltarget='SpeakersData'>Speakers</li> -->
                         <!-- <li class='scrollToLink venue-link' scrolltarget='VenueData'>Venue</li> -->
                         <li class='scrollToLink video-link' scrolltarget='VideoData'>Videos</li>
                 </div>
@@ -175,25 +175,27 @@
 
                 </div>
         </div>
-        <div class="section" id="SpeakersData" styleClass="style-speakers" line-color="#E6648F" map-pitch="10">
+        <!-- <div class="section" id="SpeakersData" styleClass="style-speakers" line-color="#E6648F" map-pitch="10">
                 <div class="section-title">Speakers</div>
                 <div class="transition speakers-block">
-                        <!-- <div class="speakers-col" v-for="colnum in 2"> -->
-                        <div v-for="(speaker, index) in speakersSection" class="speaker-tile">
+                        <div class="speakers-col" v-for="colnum in 2">
+                        <div v-for="(speaker, index) in speakersSection" class="speaker-tile" 
+                        
+                        v-if="index%2==(colnum-1)">
                                 <div class="transition speaker-tile-header">
-                                        <img :src="speaker.img" alt="">
-
+                                        <img :src="speaker.img" alt="" v-on:click="speaker.isOpen=!speaker.isOpen;">
+                                      
                                 </div>
-
-                                <div class="speaker-tile-desc">
-                                        <div class="speaker-tile-title">{{speaker.name}}</div>
-                                        <div class="speaker-tile-subtitle">{{speaker.subtitle}}</div>
+                                <div class="speaker-tile-title">{{speaker.name}}</div>
+                                <div class="speaker-tile-subtitle">{{speaker.subtitle}}</div>
+                                <div class="speaker-tile-desc"  v-bind:class="{ speakerOpen: speaker.isOpen }">
+                                      
                                         {{speaker.desc}}
                                 </div>
                         </div>
-                        <!-- </div>    -->
+                        </div>   
                 </div>
-        </div>
+        </div> -->
         <!-- <div class="section" id="VenueData" styleClass="style-venue" line-color="#fff" map-pitch="0">
                 <div class="section-title">Venue</div>
             

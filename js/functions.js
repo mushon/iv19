@@ -31,6 +31,9 @@ $.getJSON('dates.json')
 $.getJSON('speakers.json')
 	.done(function (data) {
 		speakersData.speakersSection = data;
+		for (var i = 0; i < speakersData.speakersSection.length; i++) {
+			speakersData.speakersSection[i].isOpen = true;
+		}
 	});
 
 
