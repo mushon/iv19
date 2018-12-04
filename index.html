@@ -116,7 +116,7 @@
                 <div class="section-title">Tickets</div>
                 <div class="tickets-container">
 
-                        <div class="tickets-block" v-for="ticket in ticketsSection" v-bind:class="{ 'is-disabled': ticket.isSoldOut}">
+                        <a class="tickets-block" v-for="ticket in ticketsSection" v-bind:class="{ 'is-disabled': ticket.isSoldOut}" :href="ticket.ticketLink">
                                 <div class="block">
                                         <div v-if="ticket['meta-title']" class="tickets-meta-title">{{ticket['meta-title']}}</div>
                                         <div class="tickets-main-title">{{ticket.title}}</div>
@@ -125,7 +125,7 @@
                                 <div class="button">purchase </div>
                                 <div class="sold-out-tag tickets-main-title ">Sold out</div>
 
-                        </div>
+                        </a>
                 </div>
 
         </div>
@@ -168,7 +168,8 @@
                                                 </div>
 
                                         </div>
-                                        {{ event.content }}
+                                        <span v-html="event.content"></span>
+                                      
                                 </div>
 
                         </div>
@@ -178,16 +179,18 @@
         <div class="section" id="SpeakersData" styleClass="style-speakers" line-color="#E6648F" map-pitch="10">
                 <div class="section-title">Speakers</div>
                 <div class="transition speakers-block">
-                        <div class="speakers-col" v-for="colnum in 2">
-                        <div v-for="(speaker, index) in speakersSection" class="speaker-tile" v-on:click="reverse(index)" v-if="index%2==(colnum-1)">
+                        <div class="speakers-col" v-for="colnum in 3">
+                        <div v-for="(speaker, index) in speakersSection" class="speaker-tile" v-on:click="reverse(index)" v-if="index%3==(colnum-1)">
                                 <div class="transition speaker-tile-header">
                                         <img :src="speaker.img" alt="" >
                                       
                                 </div>
                                 <div class="speaker-tile-title">{{speaker.name}}</div>
                                 <div class="speaker-tile-subtitle">{{speaker.subtitle}}</div>
-                                <div class="speaker-tile-desc"  :class="{ speakerOpen: speaker.isOpen }">                                      
-                                        {{speaker.desc}}
+                                <div class="speaker-tile-desc"  >                
+                                        <span v-html="speaker.desc"></span>
+
+                                        <!-- {{speaker.desc}} -->
                                 </div>
                         </div>
                         </div>   

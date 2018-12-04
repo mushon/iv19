@@ -2,13 +2,16 @@
     "title":"Mega-Early-Bird Tickets",
     "meta-title":"BEST DEAL",
     "price":"55$ • For individuals only",
+    "ticketLink":"http://",
     "isSoldOut":true
 },{
     "title":"Day Tickets",
     "price":"55$",
+    "ticketLink":"http://",
     "isSoldOut":false
 },{
     "title":"Company Tickets",
     "price":"49$ • For Companies only",
+    "ticketLink":"http://",
     "isSoldOut":false
 }]

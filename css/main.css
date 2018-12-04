@@ -1,5 +1,6 @@
 @import 'fonts.css';
 
+
 body {
     --padding-date: 128px;
     box-sizing: border-box;
@@ -26,6 +27,10 @@ body {
 
 }
 
+.scroll-lock {
+    overflow: hidden;
+}
+
 .noselect {
     -webkit-touch-callout: none;
     /* iOS Safari */
@@ -49,7 +54,7 @@ a {
 
 .video-tile.invisible,
 .video-tile.inactive.invisible {
-    /* display: none !important; */
+    display: none !important;
     height: 0;
     overflow: hidden;
     padding: 0;
@@ -655,7 +660,7 @@ body.style-video .scrollToLink.video-link {
 .event-images-container {
     max-width: 100%;
     position: relative;
-    height: 330px;
+    padding-bottom: 24px;
 }
 
 .event-images-container .event-image {
@@ -1170,7 +1175,7 @@ body.style-video .scrollToLink.video-link {
 
 /* mobbile */
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 900px) {
 
     body {
         --padding-date: 72px;
@@ -1197,6 +1202,7 @@ body.style-video .scrollToLink.video-link {
     .section {
         padding-left: 12px;
         padding-right: 12px;
+        max-width: 480px;
     }
 
 
@@ -1275,7 +1281,7 @@ body.style-video .scrollToLink.video-link {
 
     .speaker-tile {
         width: 100%;
-        max-width: 310px;
+        max-width: 480px;
                 flex-direction: column;
     }
 
@@ -1315,6 +1321,7 @@ body.style-video .scrollToLink.video-link {
     }
     .video-tile {
         width: 100%;
+        max-width: 100%;
         flex-direction: column;
         margin: 0 0 24px;
     }
